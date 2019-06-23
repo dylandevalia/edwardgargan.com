@@ -1,0 +1,44 @@
+body {
+    background-color: #FFFCFF;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html {
+    height: 100%;
+}
+
+#container {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+#content {
+        width: 280px;
+    color: #4D5061;
+}
+
+#content a, #content a:visited {
+    color: #4D5061;
+    text-decoration: none;
+    /* Transition *from* on-hover */
+    transition: 0.08s;
+}
+
+div#social-icons {
+    margin-top: 20px;
+}
+
+#content a:hover {
+    color: #FF6B6B;
+    transition: 0.08s;
+}
+
+.social-icon {
+    margin: 0 5px;
+    font-size: 2em;
+    margin: 0px 5px;
+}
+
