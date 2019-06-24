@@ -27,8 +27,13 @@ html {
     transition: 0.08s;
 }
 
-div#social-icons {
+#social-icons-container {
     margin-top: 20px;
+}
+
+#social-icons-container a {
+    /* Prevents weird <a> hitboxes */
+    display: inline-block;
 }
 
 #content a:hover {
@@ -39,6 +44,4 @@ div#social-icons {
 .social-icon {
     margin: 0 5px;
     font-size: 2em;
-    margin: 0px 5px;
 }
-
