@@ -23,7 +23,7 @@ html {
 }
 
 #content *::selection {
-    background: #B8D8D8;
+    background: #C2DFE3;
 }
 
 #content a, #content a:visited {
