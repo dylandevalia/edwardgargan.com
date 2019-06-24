@@ -33,18 +33,24 @@ html {
     transition: 0.08s;
 }
 
+#content a:hover {
+    color: #FF6B6B;
+    transition: 0.1s;
+}
+
 #social-icons-container {
     margin-top: 20px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #social-icons-container a {
     /* Prevents weird <a> hitboxes */
     display: inline-block;
-}
 
-#content a:hover {
-    color: #FF6B6B;
-    transition: 0.1s;
 }
 
 .social-icon {
