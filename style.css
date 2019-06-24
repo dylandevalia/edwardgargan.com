@@ -16,7 +16,9 @@ html {
 }
 
 #content {
-        width: 280px;
+    /* Nudge content up a bit */
+    margin-top: -32px;
+    width: 280px;
     color: #4D5061;
 }
 
