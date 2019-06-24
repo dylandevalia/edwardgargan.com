@@ -22,6 +22,10 @@ html {
     color: #4D5061;
 }
 
+#content *::selection {
+    background: #B8D8D8;
+}
+
 #content a, #content a:visited {
     color: #4D5061;
     text-decoration: none;
