@@ -18,8 +18,9 @@ html {
 #content {
     /* Nudge content up a bit */
     margin-top: -32px;
-    width: 280px;
+    width: 300px;
     color: #4D5061;
+    font-size: 1.05em;
 }
 
 #content *::selection {
