@@ -4,16 +4,11 @@
         <title>Edward Gargan</title>
 
         <meta charset="utf-8">
-        <!-- TODO fix description -->
         <meta name="description" content="UK based software developer and good UI enthusiast">
         <meta name=”viewport” content=”width=device-width,initial-scale=1″>
 
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
-
-        <script src="https://kit.fontawesome.com/01cecb66dd.js"></script>
-        <script src="script/clipboard/clipboard.js"></script>
-        <script src="script/hello.js"></script>
     </head>
 
     <body id="container">
@@ -22,7 +17,12 @@
                 <p><b>Edward Gargan</b></p>
                 <p>Full-stack developer currently working at <b><a href="https://www.netcraft.com/"target="_blank">Netcraft</a></b></p>
                 <p>Site still in development - coming soon probably</p>
-                <p>Say <b><a id="email-link" href="#" onclick="return false;" data-clipboard-text="hello@edwardgargan.com">hello@edwardgargan.com</a></b>,</p>
+                <div>Say 
+                    <div class="popup-container">
+                        <b><a href="#" id="email-link" onclick="emailOnClick()" data-clipboard-text="hello@edwardgargan.com">hello@edwardgargan.com</a></b>
+                        <span class="popup" id="copied-popup">Copied to clipboard!</span>
+                    </div>,
+                </div>
             </div>
             <div id="social-icons-container">
                 <p>or</p>
@@ -37,6 +37,9 @@
                 </a>
             </div>
         </div>
+        <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
+        <script src="https://kit.fontawesome.com/01cecb66dd.js"></script>
         <script src="script/copy-email.js"></script>
+        <script src="script/hello.js"></script>
     </body>
 </html>

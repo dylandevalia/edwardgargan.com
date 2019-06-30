@@ -9,16 +9,17 @@ html {
 
 #container {
     height: inherit;
+    margin: 0;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0;
 }
 
 #content {
+    width: 320px;
     /* Nudge content up a bit */
     margin-top: -32px;
-    width: 320px;
     color: #4D5061;
 }
 
@@ -29,7 +30,7 @@ html {
 #content a, #content a:visited {
     color: #4D5061;
     text-decoration: none;
-    /* Transition *from* on-hover */
+    /* Transition *from* hover */
     transition: 0.08s;
 }
 
@@ -46,6 +47,34 @@ html {
     margin-bottom: 0;
 }
 
+.popup-container {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+}
+
+.popup {
+    padding: 5px 15px;
+    bottom: 125%;
+
+    position: absolute;
+    visibility: hidden;
+
+    border-radius: 3px;
+    font-size: 0.8em;
+    background-color: #353535;
+    color: #FFFCFF;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popup.show {
+    visibility: visible;
+}
+
 #social-icons-container {
     display: flex;
     align-items: center;
@@ -53,7 +82,7 @@ html {
 
 #social-icons-container a {
     margin: 0 7px;
-    font-size: 2em;
+    font-size: 1.9em;
 
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -64,5 +93,3 @@ html {
 #social-icons-container p {
     margin-right: 5px;
 }
-
-
