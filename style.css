@@ -73,6 +73,29 @@ html {
 
 .popup.show {
     visibility: visible;
+    animation: popup-enter 0.12s ease-out;
+}
+
+@keyframes popup-enter {
+    from {
+        transform: translate(0, 6px);
+        opacity: 0.3;
+    }
+}
+
+.popup.dismiss {
+    opacity: 0;
+    visibility: hidden;
+    animation: popup-leave 0.1s;
+}
+
+/* Animations from visibile to hidden occur on the last keyframe,
+ * so the element will stay visible for the duration of the anim */
+@keyframes popup-leave {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 #social-icons-container {
