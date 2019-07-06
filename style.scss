@@ -1,0 +1,127 @@
+$main-font: 'Roboto Mono', monospace;
+
+$colour-background:       #FFFCFF;
+$colour-font:             #4D5061;
+$colour-font-hover:       #FE5F55;
+$colour-font-selection:   #EDE8E8;
+$colour-popup-background: #353535;
+
+body {
+    background-color: $colour-background;
+    font-family: $main-font;
+}
+
+html {
+    height: 100%;
+}
+
+#container {
+    height: inherit;
+    margin: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content {
+    width: 320px;
+    // Nudge content up a bit
+    margin-top: -32px;
+    color: $colour-font;
+
+    *::selection {
+        background: $colour-font-selection;
+    }
+
+    a, a:visited {
+        color: $colour-font;
+        text-decoration: none;
+        // Transition *from* hover
+        transition: 0.08s;
+    }
+
+    a:hover {
+        color: $colour-font-hover;
+        transition: 0.1s;
+    }
+}
+
+#text {
+    font-size: 1.05em;
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.popup-container {
+    display: inline-flex;
+    position: relative;
+    justify-content: center;
+}
+
+.popup {
+    padding: 5px 15px;
+    bottom: 125%;
+
+    position: absolute;
+    visibility: hidden;
+
+    border-radius: 3px;
+    font-size: 0.8em;
+    background-color: $colour-popup-background;
+    // Use background colour as font colour, contrasts with dark bg
+    color: $colour-background;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popup.show {
+    visibility: visible;
+    animation: popup-enter 0.12s ease-out;
+}
+
+@keyframes popup-enter {
+    from {
+        transform: translate(0, 6px);
+        opacity: 0.3;
+    }
+}
+
+.popup.dismiss {
+    opacity: 0;
+    visibility: hidden;
+    animation: popup-leave 0.1s;
+}
+
+// Animations from visibile to hidden occur on the last keyframe,
+// so the element will stay visible for the duration of the anim
+@keyframes popup-leave {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#social-icons-container {
+    display: flex;
+    align-items: center;
+
+    a {
+        margin: 0 7px;
+        font-size: 1.7em;
+
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    p {
+        margin-right: 5px;
+    }
+}

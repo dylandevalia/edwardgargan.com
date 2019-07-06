@@ -1,0 +1,2 @@
+#!/bin/bash
+for file in *.s[a,c]ss; do sass $file > "site/${file%.*}.css"; done
