@@ -26,7 +26,9 @@ html {
 
 #content {
     width: 320px;
+
     color: $colour-font;
+    font-size: 1.05em;
 
     *::selection {
         background: $colour-font-selection;
@@ -46,8 +48,6 @@ html {
 }
 
 #text {
-    font-size: 1.05em;
-
     p:last-child {
         margin-bottom: 0;
     }
