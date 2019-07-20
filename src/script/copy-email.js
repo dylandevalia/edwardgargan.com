@@ -1,6 +1,8 @@
+const clipboardjs = require('clipboard');
+
 // Initialise clipboard.js for email element
 const emailLink = document.getElementById('email-link');
-const clipboard = new ClipboardJS(emailLink);
+const emailClipboardWrapper = new ClipboardJS(emailLink);
 
 // Popup hide timeout holder
 var hidePopupTimeout;

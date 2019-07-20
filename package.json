@@ -1,0 +1,24 @@
+{
+  "name": "edwardgargan.com",
+  "version": "1.0.0",
+  "description": "Personal site of Edward Gargan",
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "clipboard": "^2.0.4",
+    "node-sass": "^4.12.0",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack; node-sass src/style.scss dist/style.css; cp src/index.html dist/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/egargan/edwardgargan.com.git"
+  },
+  "author": "Edward Gargan <edg@edwardgargan.com> (https://edwardgargan.com)",
+  "license": "N/A",
+  "homepage": "https://github.com/egargan/edwardgargan.com#readme"
+}
