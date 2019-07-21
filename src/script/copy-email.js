@@ -1,4 +1,4 @@
-const ClipboardJS = require('clipboard');
+import ClipboardJS from 'clipboard';
 
 // Initialise clipboard.js for email element
 var emailLink = document.getElementById('email-link');
