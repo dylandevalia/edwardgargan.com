@@ -1,7 +1,7 @@
-const clipboardjs = require('clipboard');
+const ClipboardJS = require('clipboard');
 
 // Initialise clipboard.js for email element
-const emailLink = document.getElementById('email-link');
+var emailLink = document.getElementById('email-link');
 const emailClipboardWrapper = new ClipboardJS(emailLink);
 
 // Popup hide timeout holder
@@ -21,3 +21,6 @@ function emailOnClick() {
         copiedPopup.classList.add("dismiss");
     }, 1400);
 }
+
+// Attach listener to email link element
+emailLink.addEventListener('click', emailOnClick, false);
